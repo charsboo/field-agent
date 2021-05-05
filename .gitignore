@@ -1,0 +1,25 @@
+# Cache
+.cache
+.cache/
+.npm
+
+# Dependencies
+node_modules/
+
+# Env
+.env
+
+# Logs
+*.log
+
+# Yarn
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# VS Code
+.vscode/

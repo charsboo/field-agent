@@ -1,0 +1,25 @@
+{
+  "name": "field-agent",
+  "author": "Charles Kim",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "postcss src/index.css -o dist/field-agent.min.css"
+  },
+  "dependencies": {
+    "cssnano": "^5.0.2",
+    "postcss": "^8.2.13",
+    "postcss-cli": "^8.3.1",
+    "postcss-preset-env": "^6.7.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "concurrently": "^6.0.2"
+  },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "not dead",
+    "not IE 11"
+  ]
+}

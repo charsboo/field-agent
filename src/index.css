@@ -1,4 +1,8 @@
 /*! Field Agent v1.0.0 | MIT License | github.com/charsboo/field-agent */
+/*
+ *  Source Code Pro from Google Fonts
+ */
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap");
 
 :root {
   --agent--h1: 3rem;
@@ -7,7 +11,7 @@
   --agent--h4: 1rem;
   --agent--h5: 1rem;
   --agent--h6: 1rem;
-  --agent--lh: 0.5rem;
+  --agent--ld: 0.5rem;
   --agent--xl: 4rem;
   --agent--lg: 3rem;
   --agent--md: 2rem;
@@ -57,14 +61,14 @@ hr {
 h1 {
   font-size: var(--agent--h1);
   font-weight: inherit;
-  line-height: calc(var(--agent--h1) + var(--agent--lh));
+  line-height: calc(var(--agent--h1) + var(--agent--ld));
   border-top-width: 0.0625rem;
   border-top-style: solid;
   border-bottom-width: 0;
   padding-block-start: var(--agent--xl);
   padding-block-end: 0;
   margin-block-start: var(--agent--xl);
-  margin-block-end: calc(var(--agent--xl) - var(--agent--lh));
+  margin-block-end: calc(var(--agent--xl) - var(--agent--ld));
 }
 
 hr + h1,
@@ -81,13 +85,13 @@ h3 {
 h2 {
   font-size: var(--agent--h2);
   font-weight: inherit;
-  line-height: calc(var(--agent--h2) + var(--agent--lh));
+  line-height: calc(var(--agent--h2) + var(--agent--ld));
 }
 
 h3 {
   font-size: var(--agent--h3);
   font-weight: inherit;
-  line-height: calc(var(--agent--h3) + var(--agent--lh));
+  line-height: calc(var(--agent--h3) + var(--agent--ld));
 }
 
 h4,
@@ -99,20 +103,20 @@ h6 {
 h4 {
   font-size: var(--agent--h4);
   font-weight: bold;
-  line-height: calc(var(--agent--h4) + var(--agent--lh));
+  line-height: calc(var(--agent--h4) + var(--agent--ld));
 }
 
 h5 {
   font-size: var(--agent--h5);
   font-weight: bold;
-  line-height: calc(var(--agent--h5) + var(--agent--lh));
+  line-height: calc(var(--agent--h5) + var(--agent--ld));
   opacity: 0.625;
 }
 
 h6 {
   font-size: var(--agent--h6);
   font-weight: bold;
-  line-height: calc(var(--agent--h6) + var(--agent--lh));
+  line-height: calc(var(--agent--h6) + var(--agent--ld));
   opacity: 0.375;
 }
 
@@ -150,7 +154,7 @@ td {
 }
 
 code {
-  font-family: "Source Code Pro", "SF Mono", monospace;
+  font-family: "Source Code Pro", ui-monospace, monospace;
   line-height: inherit;
   tab-size: 2;
 }

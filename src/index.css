@@ -130,6 +130,10 @@ table {
   margin-block-start: var(--agent--md);
 }
 
+:matches(ol, ul) :matches(ol, ul) {
+  margin-block-start: 0;
+}
+
 ul {
   list-style-type: disc;
 }

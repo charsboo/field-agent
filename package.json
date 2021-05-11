@@ -1,25 +1,38 @@
 {
-  "name": "field-agent",
-  "author": "Charles Kim (curiousslant.com)",
+  "name": "@charsboo/field-agent",
+  "version": "1.1.1",
+  "main": "dist/field-agent.min.css",
+  "author": "Charles Kim (denouement.ca)",
+  "description": "Custom stylesheet that supplements (not replaces) the Visual Studio Code Markdown preview styles",
+  "keywords": [
+    "css",
+    "markdown",
+    "vscode",
+    "visual studio code"
+  ],
   "license": "MIT",
-  "private": true,
   "scripts": {
     "build": "postcss src/index.css -o dist/field-agent.min.css"
   },
-  "dependencies": {
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "concurrently": "^6.0.2",
     "cssnano": "^5.0.2",
     "postcss": "^8.2.13",
     "postcss-cli": "^8.3.1",
     "postcss-preset-env": "^6.7.0"
-  },
-  "devDependencies": {
-    "browser-sync": "^2.26.14",
-    "concurrently": "^6.0.2"
   },
   "browserslist": [
     "> 0.5%",
     "last 2 versions",
     "not dead",
     "not IE 11"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/charsboo/field-agent.git"
+  },
+  "bugs": {
+    "url": "https://github.com/charsboo/field-agent/issues"
+  }
 }

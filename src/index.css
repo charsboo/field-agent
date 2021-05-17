@@ -123,11 +123,15 @@ h6 {
 
 p,
 pre,
-ol,
-ul,
 blockquote,
 table {
   margin-block-start: var(--agent--md);
+}
+
+ol,
+ul {
+  padding-inline-start: var(--agent--md);
+  margin-block-start: var(--agent--sm);
 }
 
 :matches(ol, ul) :matches(ol, ul) {

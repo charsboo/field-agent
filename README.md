@@ -10,7 +10,7 @@ Follow the instructions for ["Using your own CSS"](https://code.visualstudio.com
 
 You cannot link directly to a GitHub-hosted raw file as it [responds with an `X-Frame-Options: DENY` HTTP response header](https://github.com/Microsoft/vscode/issues/8287#issuecomment-230021773). Instead, use a service that serves the file with the proper headers.
 
-E.G.: [**jsDeliver**](https://www.jsdelivr.com/?docs=gh) (https://cdn.jsdelivr.net/npm/@charsboo/field-agent@1.1.1/dist/field-agent.min.css)
+E.G.: [**jsDeliver**](https://www.jsdelivr.com/?docs=gh) (https://cdn.jsdelivr.net/npm/@charsboo/field-agent@1.2/dist/field-agent.min.css)
 
 ## Details
 

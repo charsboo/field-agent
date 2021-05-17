@@ -32,6 +32,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@charsboo/field-agent@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@charsboo/field-agent@workspace:."
+  dependencies:
+    browser-sync: ^2.26.14
+    concurrently: ^6.0.2
+    cssnano: ^5.0.2
+    postcss: ^8.2.13
+    postcss-cli: ^8.3.1
+    postcss-preset-env: ^6.7.0
+  languageName: unknown
+  linkType: soft
+
 "@csstools/convert-colors@npm:^1.4.0":
   version: 1.4.0
   resolution: "@csstools/convert-colors@npm:1.4.0"
@@ -1347,19 +1360,6 @@ __metadata:
   checksum: 22822313d66aa7ef7fd392bf2da1cdf074dce902460bf73c0f0da6d58eb394ea8d74b8cce6c9466f5d659a51caeb732f4305cf8514ca8325490a4e3d873f5aa0
   languageName: node
   linkType: hard
-
-"field-agent@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "field-agent@workspace:."
-  dependencies:
-    browser-sync: ^2.26.14
-    concurrently: ^6.0.2
-    cssnano: ^5.0.2
-    postcss: ^8.2.13
-    postcss-cli: ^8.3.1
-    postcss-preset-env: ^6.7.0
-  languageName: unknown
-  linkType: soft
 
 "fill-range@npm:^7.0.1":
   version: 7.0.1

@@ -6,9 +6,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap");
 
 :root {
-  --agent--h1: 3rem;
-  --agent--h2: 2rem;
-  --agent--h3: 1.5rem;
+  --agent--h1: 2rem;
+  --agent--h2: 1.5rem;
+  --agent--h3: 1.25rem;
   --agent--h4: 1rem;
   --agent--h5: 1rem;
   --agent--h6: 1rem;
@@ -134,7 +134,7 @@ ul {
   margin-block-start: var(--agent--sm);
 }
 
-:matches(ol, ul) :matches(ol, ul) {
+:is(ol, ul) :is(ol, ul) {
   margin-block-start: 0;
 }
 
@@ -175,7 +175,7 @@ code {
   border-color: rgba(0, 0, 0, 0.5);
 }
 
-.vscode-light :matches(hr, h1, td) {
+.vscode-light :is(hr, h1, td) {
   border-color: rgba(0, 0, 0, 0.25);
 }
 
@@ -183,32 +183,29 @@ code {
   border-color: rgba(255, 255, 255, 0.5);
 }
 
-.vscode-dark :matches(hr, h1, td) {
+.vscode-dark :is(hr, h1, td) {
   border-color: rgba(255, 255, 255, 0.25);
 }
 
 /*
  *  Refine spacing
- *
- *  postcss-preset-env does not transform `:is()`
- *  VS Code does not support `:is()`
  */
-:matches(h1, h2, h3, h4, h5, h6, p, pre):empty {
+:is(h1, h2, h3, h4, h5, h6, p, pre):empty {
   margin: 0;
 }
 
-:matches(hr, h1, h2, h3, h4, h5, h6, p, pre, ol, ul, blockquote, table):first-child {
+:is(hr, h1, h2, h3, h4, h5, h6, p, pre, ol, ul, blockquote, table):first-child {
   margin-block-start: 0;
 }
 
-:matches(h2, h3, h4, h5, h6) + :matches(h2, h3, h4, h5, h6) {
+:is(h2, h3, h4, h5, h6) + :is(h2, h3, h4, h5, h6) {
   margin-block-start: var(--agent--sm);
 }
 
-:matches(h3) + :matches(p, pre, ol, ul, blockquote, table) {
+:is(h3) + :is(p, pre, ol, ul, blockquote, table) {
   margin-block-start: var(--agent--sm);
 }
 
-:matches(h4, h5, h6) + :matches(p, pre, ol, ul, blockquote, table) {
+:is(h4, h5, h6) + :is(p, pre, ol, ul, blockquote, table) {
   margin-block-start: var(--agent--xs);
 }

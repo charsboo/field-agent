@@ -1,10 +1,9 @@
-# Cache
-.cache
-.cache/
-.npm
-
 # Dependencies
 node_modules/
+
+# Cache
+.cache
+.npm
 
 # Env
 .env
@@ -23,3 +22,17 @@ node_modules/
 
 # VS Code
 .vscode/
+
+# macOS
+.DS_Store
+
+# Windows
+*.lnk
+[Dd]esktop.ini
+Thumbs.db
+
+# Notes
+NOTES.md
+
+# Tests
+test/

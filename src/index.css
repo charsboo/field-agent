@@ -7,11 +7,11 @@
 
 :root {
   --agent--h1: 2rem;
-  --agent--h2: 1.5rem;
+  --agent--h2: 1.375rem;
   --agent--h3: 1.25rem;
-  --agent--h4: 1rem;
+  --agent--h4: 1.125rem;
   --agent--h5: 1rem;
-  --agent--h6: 1rem;
+  --agent--h6: 0.875rem;
   --agent--lh: calc(1em + 0.5rem);
   --agent--xl: 4rem;
   --agent--lg: 3rem;
@@ -24,13 +24,15 @@
  *  Define `font-family`, `font-size`, `line-height` in settings
  */
 html {
+  font-size: 100%;
   padding: 0;
 }
 
 body {
   font-weight: 300;
+  line-height: var(--agent--lh);
   letter-spacing: 0.02em;
-  padding: var(--agent--md) var(--agent--lg);
+  padding: var(--agent--md);
 }
 
 h2,
@@ -52,7 +54,15 @@ ul {
 hr {
   border-bottom-width: 0.0625rem;
   block-size: 0.0625rem;
-  margin-block: var(--agent--xl);
+  margin-block: var(--agent--md);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-block-start: var(--agent--md);
 }
 
 /*
@@ -62,14 +72,12 @@ hr {
 h1 {
   font-size: var(--agent--h1);
   font-weight: inherit;
-  line-height: calc(var(--agent--h1) + var(--agent--lh));
   border-top-width: 0.0625rem;
   border-top-style: solid;
   border-bottom-width: 0;
-  padding-block-start: var(--agent--xl);
+  padding-block-start: var(--agent--md);
   padding-block-end: 0;
-  margin-block-start: var(--agent--xl);
-  margin-block-end: calc(var(--agent--xl) - var(--agent--lh));
+  margin-block-end: var(--agent--md);
 }
 
 hr + h1,
@@ -78,60 +86,47 @@ h1:first-child {
   padding-block-start: 0;
 }
 
-h2,
-h3 {
-  margin-block-start: var(--agent--lg);
-}
-
 h2 {
   font-size: var(--agent--h2);
   font-weight: inherit;
-  line-height: calc(var(--agent--h2) + var(--agent--lh));
 }
 
 h3 {
   font-size: var(--agent--h3);
   font-weight: inherit;
-  line-height: calc(var(--agent--h3) + var(--agent--lh));
-}
-
-h4,
-h5,
-h6 {
-  margin-block-start: var(--agent--md);
 }
 
 h4 {
   font-size: var(--agent--h4);
-  font-weight: bold;
-  line-height: calc(var(--agent--h4) + var(--agent--lh));
+  font-weight: 400;
 }
 
 h5 {
   font-size: var(--agent--h5);
-  font-weight: bold;
-  line-height: calc(var(--agent--h5) + var(--agent--lh));
-  opacity: 0.625;
+  font-weight: 400;
 }
 
 h6 {
   font-size: var(--agent--h6);
-  font-weight: bold;
-  line-height: calc(var(--agent--h6) + var(--agent--lh));
-  opacity: 0.375;
+  font-weight: 600;
 }
 
 p,
 pre,
+ol,
+ul,
 blockquote,
 table {
-  margin-block-start: var(--agent--md);
+  margin-block-start: var(--agent--sm);
+}
+
+pre {
+  font-size: 0.75rem;
 }
 
 ol,
 ul {
   padding-inline-start: var(--agent--md);
-  margin-block-start: var(--agent--sm);
 }
 
 :is(ol, ul) :is(ol, ul) {
@@ -154,7 +149,8 @@ blockquote {
 }
 
 blockquote footer {
-  margin-block-start: var(--agent--sm);
+  font-size: 0.75rem;
+  margin-block-start: var(--agent--xs);
 }
 
 th,
@@ -162,10 +158,18 @@ td {
   padding: 0.5rem;
 }
 
-code {
+code,
+kbd {
   font-family: "Source Code Pro", ui-monospace, monospace;
+  font-size: 0.875rem;
   line-height: inherit;
+  letter-spacing: 0;
   tab-size: 2;
+}
+
+sup,
+sub {
+  line-height: 0;
 }
 
 /*

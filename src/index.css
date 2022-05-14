@@ -1,4 +1,4 @@
-/*! Field Agent v2.0.1 | MIT License | github.com/charsboo/field-agent */
+/*! Field Agent v2.0.3 | MIT License | github.com/charsboo/field-agent */
 
 /*
  *  Source Code Pro from Google Fonts
@@ -117,7 +117,7 @@ table {
  * Increased specifity required to override VS Code stylesheet
  */
 pre:not(.hljs) {
-  font-size: 0.75rem;
+  line-height: calc(1em + 0.25rem);
   padding-block: var(--agent--xs);
   padding-inline: var(--agent--sm);
 }
@@ -162,8 +162,8 @@ td {
 code,
 kbd {
   font-family: "Noto Sans Mono", ui-monospace, monospace;
-  font-size: 0.75rem;
-  line-height: calc(1em + 0.375rem);
+  font-size: 0.875em;
+  line-height: inherit;
   letter-spacing: 0;
   color: var(--agent--accent);
 }
@@ -220,9 +220,14 @@ strong {
 }
 
 :is(hr, h1, h2, h3, h4, h5, h6, p, pre, ol, ul, blockquote, table):first-child,
-:is(:empty)
-  + :is(h4, h1, h2, h3, h4, h5, h6, p, pre, ol, ul, blockquote, table) {
+:empty + :is(hr, h1, h2, h3, h4, h5, h6, p, pre, ol, ul, blockquote, table) {
   margin-block-start: 0;
+}
+
+h2 + :is(h2, h3, h4),
+h3 + :is(h3, h4),
+h4 + h4 {
+  margin-block-start: var(--agent--sm);
 }
 
 :is(:empty, h3, h4, h5, h6) + :is(p, ol, ul) {

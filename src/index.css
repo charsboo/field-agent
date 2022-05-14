@@ -171,8 +171,7 @@ kbd {
 /*
  *  Do not apply to `code` or `kbd` inside `pre`
  */
-p code,
-p kbd {
+:is(h1, h2, h3, h4, h5, h6, p) :is(code, kbd) {
   margin-inline: 0.25rem;
 }
 

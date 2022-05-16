@@ -1,9 +1,9 @@
-/*! Field Agent v2.0.4 | MIT License | github.com/charsboo/field-agent */
+/*! Field Agent v2.0.5 | MIT License | github.com/charsboo/field-agent */
 
 /*
  *  Source Code Pro from Google Fonts
  */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@400;700&display=swap");
 
 :root {
   --agent--h1: 1.5rem;
@@ -30,7 +30,7 @@ html {
 }
 
 body {
-  font-weight: 300;
+  font-weight: 400;
   line-height: var(--agent--lh);
   /* letter-spacing: 0.02em; */
   padding: var(--agent--md);
@@ -56,7 +56,7 @@ hr {
 
 h1 {
   font-size: var(--agent--h1);
-  font-weight: 600;
+  font-weight: 700;
   border-block-start-width: 0.0625rem;
   border-block-start-style: solid;
   border-block-end-width: 0;
@@ -74,32 +74,32 @@ h1:first-child {
 
 h2 {
   font-size: var(--agent--h2);
-  font-weight: 600;
+  font-weight: 700;
   margin-block-start: var(--agent--lg);
 }
 
 h3 {
   font-size: var(--agent--h3);
-  font-weight: 600;
+  font-weight: 700;
   margin-block-start: var(--agent--lg);
 }
 
 h4 {
   font-size: var(--agent--h4);
-  font-weight: 600;
+  font-weight: 700;
   margin-block-start: var(--agent--md);
 }
 
 h5 {
   font-size: var(--agent--h5);
-  font-weight: 600;
+  font-weight: 700;
   opacity: 0.625;
   margin-block-start: var(--agent--sm);
 }
 
 h6 {
   font-size: var(--agent--h6);
-  font-weight: 600;
+  font-weight: 700;
   opacity: 0.375;
   margin-block-start: var(--agent--sm);
 }
@@ -171,7 +171,8 @@ kbd {
 /*
  *  Do not apply to `code` or `kbd` inside `pre`
  */
-:is(h1, h2, h3, h4, h5, h6, p) :is(code, kbd) {
+:is(h1, h2, h3, h4, h5, h6, p, li)
+  :is(code, kbd):not(:first-child):not(:last-child) {
   margin-inline: 0.25rem;
 }
 
@@ -189,7 +190,7 @@ sub {
 
 b,
 strong {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 /*

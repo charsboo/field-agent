@@ -1,6 +1,6 @@
 # Markdown
 
-Visual Studio Code supports the CommonMark spec using the [markdown-it](https://github.com/markdown-it/markdown-it) library (which supports the `tables` and `strikethrough` GFM extensions).
+Visual Studio Code supports the CommonMark [spec](https://spec.commonmark.org/) using the [markdown-it](https://github.com/markdown-it/markdown-it) library (which supports the `tables` and `strikethrough` GFM extensions).
 
 Location of VS Code's markdown stylesheet: `/Applications/Visual Studio Code.app/Contents/Resources/app/extensions/markdown-language-features/media/markdown.css`
 
@@ -29,15 +29,19 @@ See VS Code preview source: <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>P</kbd> the
   - Images
   - Autolinks
 
+**Note:** Container blocks can contain other blocks; leaf blocks cannot.
+
 ---
+
+## Rendering
 
 ### Leaf blocks
 
-#### Thematic breaks
+#### ↓ Thematic breaks
 
 ---
 
-#### Headings
+#### ↓ Headings
 
 # Heading 1
 
@@ -51,9 +55,7 @@ See VS Code preview source: <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>P</kbd> the
 
 ###### Heading 6
 
----
-
-#### Headings with paragraphs
+#### ↓ Headings and siblings
 
 # Heading 1
 
@@ -79,35 +81,44 @@ Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit assumenda mini
 
 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit assumenda minima minus, placeat fuga harum doloremque saepe cupiditate nulla? Blanditiis optio facere beatae velit aut quasi amet distinctio exercitationem, dicta iste expedita.
 
----
-
-#### Fenced code blocks
+#### ↓ Fenced code blocks
 
 ```html
+<!-- HTML -->
 <p>Lorem ipsum dolor sit amet.</p>
-  <p>Tab</p>
-  <p>Two spaces</p>
+<p>Tab</p>
+<p>Two spaces</p>
 ```
 
-Lorem ipsum dolor sit amet.
-
 ```css
+/* CSS */
 p {
   margin-top: 1.5rem;
 }
 ```
 
-#### HTML blocks
+Lorem ispum dolor, sit amet.
 
-<p>Lorem ipsum dolor sit amet <u>consectetur adipisicing elit</u></p>
+```js
+// JS
+const foo = () => "bar";
+```
 
-#### Paragraphs
+#### ↓ HTML blocks
+
+<p>VS Code will add <code>&lt;div data-line="[line-number]" class="code-line" dir="auto"&gt;&lt;div&gt;</code> above this line.</p>
+
+#### ↓ Paragraphs
 
 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit assumenda minima minus, placeat fuga harum doloremque saepe cupiditate nulla? Blanditiis optio facere beatae velit aut quasi amet distinctio exercitationem, dicta iste expedita.
 
+There is an empty `<p>` element below this paragraph. Its margins will be collapsed.
+
+<p></p>
+
 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit assumenda minima minus, placeat fuga harum doloremque saepe cupiditate nulla? Blanditiis optio facere beatae velit aut quasi amet distinctio exercitationem, dicta iste expedita.
 
-#### Tables (GitHub Flavored Markdown extensions)
+#### ↓ Tables (GitHub Flavored Markdown extension)
 
 | Lorem | Ipsum |
 | ----- | ----- |
@@ -116,7 +127,7 @@ Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit assumenda mini
 
 ### Container blocks
 
-#### Block quotes
+#### ↓ Block quotes
 
 > Any fool can write code that a computer can understand. Good programmers write code that humans can understand. <footer>— Martin Fowler</footer>
 
@@ -124,8 +135,9 @@ Lorem ipsum dolor sit amet
 
 > Fix the cause, not the symptom. <footer>— Steve Maguire</footer>
 
-#### Lists
+#### ↓ Lists
 
+- Unordered list
 - Unordered list
   1. Nested ordered list
   1. Nested ordered list
@@ -134,58 +146,102 @@ Lorem ipsum dolor sit amet
   - Nested unordered list
 - Unordered list
 
+1. > Experience is the name everyone gives to their mistakes. <footer>— Oscar Wilde</footer>
 1. Ordered list
+1. Ordered list with nested list
    1. Nested ordered list
    1. Nested ordered list
+1. Ordered list with nested list
+   - Nested unordered list
+   - Nested unordered list
+   1. Nested ordered list
+   1. Nested ordered list
+1. Ordered list (with trailing `\`)\
+   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit assumenda minima minus, placeat fuga harum doloremque saepe cupiditate nulla? Blanditiis optio facere beatae velit aut quasi amet distinctio exercitationem, dicta iste expedita.
+1. Ordered list (with empty line)
+
+   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit assumenda minima minus, placeat fuga harum doloremque saepe cupiditate nulla? Blanditiis optio facere beatae velit aut quasi amet distinctio exercitationem, dicta iste expedita.
+
+1. <p>Ordered list (with paragraphs wrapped in <code>&lt;p&gt;</code>)</p>
+   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit assumenda minima minus, placeat fuga harum doloremque saepe cupiditate nulla? Blanditiis optio facere beatae velit aut quasi amet distinctio exercitationem, dicta iste expedita.</p>
+1. Ordered list with blockquote (without empty line)\
+   Update (2022-12-02): Looks like VS Code now wraps text in `<p>`
+   > Experience is the name everyone gives to their mistakes. <footer>— Oscar Wilde</footer>
+1. Ordered list with blockquote (with empty line)
+
+   > Experience is the name everyone gives to their mistakes. <footer>— Oscar Wilde</footer>
+
 1. Ordered list
-   - Nested unordered list
-   - Nested unordered list
+1. ```js
+   const listType = "ul";
+   console.log(`The list type is: ${ul}`);
+   ```
+1. Ordered list with fenced code block
+   ```js
+   const listType = "ul";
+   console.log(`The list type is: ${ul}`);
+   ```
+1. |     | Col  |
+   | --- | ---- |
+   | Row | Data |
+   | Row | Data |
+1. Ordered list with table
+   | | Col |
+   | --- | --- |
+   | Row | Data |
+   | Row | Data |
 1. Ordered list
 
-#### Task lists
+#### ↓ Task lists (GitHub Flavored Markdown extension)
 
 - [ ] foo
 - [x] bar
 
 ### Inlines
 
-#### Backslash escapes
+#### ↓ Backslash escapes
 
 Lorem ipsum \*dolor sit amet\*.
 
-#### Code spans
+#### ↓ Code spans
 
 Lorem ipsum `dolor sit amet`.
 
-#### Emphasis
+#### ↓ Emphasis
 
 Lorem ipsum _dolor sit amet_.
 
-#### Strong emphasis
+#### ↓ Strong emphasis
 
 Lorem ipsum **dolor sit amet**.
 
-#### Strikethrough (GitHub Flavored Markdown extension)
+#### ↓ Strikethrough (GitHub Flavored Markdown extension)
 
-This is ~~strikethrough~~
+Lorem ipsum ~~dolor sit amet~~
 
-#### Links
+#### ↓ Links
 
 Lorem ipsum [dolor sit amet](https://github.com/charsboo).
 
-#### Images
+#### ↓ Images
+
+VS Code wraps the `<img>` in a `<p>`.
 
 ![Lorem ipsum dolor sit amet](https://source.unsplash.com/300x200)
 
-#### Autolinks
+![Lorem ipsum dolor sit amet](https://source.unsplash.com/300x200)
+
+#### ↓ Autolinks
 
 Lorem ipsum dolor sit amet <https://github.com/charsboo>
 
 ## References
 
-- [CommonMark Spec](https://spec.commonmark.org/0.29/)
+- [CommonMark Spec](https://spec.commonmark.org/)
 - [GitHub Flavored Markdown Spec](https://github.github.com/gfm/)
 - [Visual Studio Code Docs](https://code.visualstudio.com/docs/languages/markdown)
+
+---
 
 # Markdown
 
@@ -214,4 +270,4 @@ In March 2016 two relevant informational Internet [RFCs](https://en.wikipedia.or
 
 ### CommonMark
 
-From 2012, a group of people, including [Jeff Atwood](https://en.wikipedia.org/wiki/Jeff_Atwood) and [John MacFarlane](https://en.wikipedia.org/wiki/John_MacFarlane_(philosopher)), launched what Atwood characterized as a standardization effort.<sup>[20]</sup> A community website now aims to "document various tools and resources available to document authors and developers, as well as implementors of the various Markdown implementations".<sup>[21]</sup> In September 2014, Gruber objected to the usage of "Markdown" in the name of this effort and it was rebranded as a new dialect named CommonMark.<sup>[22][23]</sup> CommonMark.org published several versions of a specification, reference implementation, and test suite, and "[plans] to announce a finalized 1.0 spec and test suite in 2019."<sup>[24]</sup> No 1.0 spec has since been released as major issues still remain unsolved.<sup>[25]</sup> Nonetheless, the following sites and projects have adopted CommonMark: Discourse, GitHub, GitLab, Reddit, Qt, Stack Exchange (Stack Overflow), and Swift.
+From 2012, a group of people, including [Jeff Atwood](https://en.wikipedia.org/wiki/Jeff_Atwood) and [John MacFarlane](<https://en.wikipedia.org/wiki/John_MacFarlane_(philosopher)>), launched what Atwood characterized as a standardization effort.<sup>[20]</sup> A community website now aims to "document various tools and resources available to document authors and developers, as well as implementors of the various Markdown implementations".<sup>[21]</sup> In September 2014, Gruber objected to the usage of "Markdown" in the name of this effort and it was rebranded as a new dialect named CommonMark.<sup>[22][23]</sup> CommonMark.org published several versions of a specification, reference implementation, and test suite, and "[plans] to announce a finalized 1.0 spec and test suite in 2019."<sup>[24]</sup> No 1.0 spec has since been released as major issues still remain unsolved.<sup>[25]</sup> Nonetheless, the following sites and projects have adopted CommonMark: Discourse, GitHub, GitLab, Reddit, Qt, Stack Exchange (Stack Overflow), and Swift.

@@ -31,8 +31,6 @@ node_modules/
 [Dd]esktop.ini
 Thumbs.db
 
-# Notes
-NOTES.md
-
 # Tests
-test/
+test/*
+!test/index.md

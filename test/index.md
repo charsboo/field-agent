@@ -146,7 +146,6 @@ Lorem ipsum dolor sit amet
   - Nested unordered list
 - Unordered list
 
-1. > Experience is the name everyone gives to their mistakes. <footer>— Oscar Wilde</footer>
 1. Ordered list
 1. Ordered list with nested list
    1. Nested ordered list
@@ -164,33 +163,58 @@ Lorem ipsum dolor sit amet
 
 1. <p>Ordered list (with paragraphs wrapped in <code>&lt;p&gt;</code>)</p>
    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit assumenda minima minus, placeat fuga harum doloremque saepe cupiditate nulla? Blanditiis optio facere beatae velit aut quasi amet distinctio exercitationem, dicta iste expedita.</p>
-1. Ordered list with blockquote (without empty line)\
+1. Ordered list with blockquote
+
+   > Experience is the name everyone gives to their mistakes. <footer>— Oscar Wilde</footer>
+
    Update (2022-12-02): Looks like VS Code now wraps text in `<p>`
-   > Experience is the name everyone gives to their mistakes. <footer>— Oscar Wilde</footer>
-1. Ordered list with blockquote (with empty line)
 
-   > Experience is the name everyone gives to their mistakes. <footer>— Oscar Wilde</footer>
+   Update (2023-01-22): … not always, but a double return ensures it will
 
-1. Ordered list
-1. ```js
-   const listType = "ul";
-   console.log(`The list type is: ${ul}`);
-   ```
+1. > Experience is the name everyone gives to their mistakes. <footer>— Oscar Wilde</footer>
 1. Ordered list with fenced code block
    ```js
    const listType = "ul";
    console.log(`The list type is: ${ul}`);
    ```
-1. |     | Col  |
-   | --- | ---- |
-   | Row | Data |
-   | Row | Data |
+1. ```js
+   const listType = "ul";
+   console.log(`The list type is: ${ul}`);
+   ```
 1. Ordered list with table
    | | Col |
    | --- | --- |
    | Row | Data |
    | Row | Data |
+1. |     | Col  |
+   | --- | ---- |
+   | Row | Data |
+   | Row | Data |
 1. Ordered list
+
+#### ↓ First child tests
+
+Blockquote:
+
+1. Lorem ipsum dolor siet amet
+
+   > Lorem ipsum dolor sit amet
+
+Code fence:
+
+1. Lorem ipsum dolor sit amet
+
+   ```text
+   Lorem ipsum dolor sit amet
+   ```
+
+Table:
+
+1.  Lorem ipsum dolor sit amet
+
+    | lorem | ipsum    |
+    | ----- | -------- |
+    | dolor | sit amet |
 
 #### ↓ Task lists (GitHub Flavored Markdown extension)
 

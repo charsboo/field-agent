@@ -1,6 +1,6 @@
 {
   "name": "@charsboo/field-agent",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "main": "dist/field-agent.min.css",
   "author": "Charles Kim (denouement.ca)",
   "description": "Custom stylesheet that supplements (not replaces) the Visual Studio Code Markdown preview styles",

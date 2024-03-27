@@ -16,8 +16,6 @@ E.G.: [**jsDeliver**](https://www.jsdelivr.com/?docs=gh) (https://cdn.jsdelivr.n
 
 Mainly adjusts font sizes and spacing between elements. You'll have to scroll more, but it makes the text easier to scan.
 
-[Browserslist](https://github.com/browserslist/browserslist) target is `> 0.5%, last 2 versions, not dead`. Differs slightly from `defaults` (does not include `Firefox ESR`).
-
 ## License
 
 Provided under [MIT License](https://opensource.org/licenses/MIT).
